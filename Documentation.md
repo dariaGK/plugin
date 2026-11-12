@@ -7,6 +7,7 @@
 ### `getHistoryFilePath()`
 
 **Файл:** [extension.ts]
+
 **Назначение:** Вычисляет абсолютный путь к файлу истории (.vscode/history.json) в корне текущего открытого проекта.
 
 #### Параметры
@@ -30,6 +31,7 @@ if (pathToFile) {
 ### `loadHistoryFromDisk(history: Map<string, vscode.TimelineItem[]>)`
 
 **Файл:** [extension.ts]
+
 **Назначение:** Читает файл .vscode/history.json с диска и восстанавливает из него объекты vscode.TimelineItem, помещая их в переданный Map. Вызывается один раз при старте расширения.
 
 #### Параметры
@@ -52,6 +54,7 @@ loadHistoryFromDisk(history);
 ### `appendToDisk(entry: StoredEntry)`
 
 **Файл:** [extension.ts]
+
 **Назначение:** Дозаписывает одну новую запись в файл .vscode/history.json. Если папки .vscode или файла истории нет — создаёт их.
 
 #### Параметры
@@ -79,6 +82,7 @@ appendToDisk({
 ### `activate(context: vscode.ExtensionContext)`
 
 **Файл:** [extension.ts]
+
 **Назначение:** Главная функция расширения. Вызывается VS Code один раз при загрузке плагина. Внутри неё настраивается провайдер Timeline, слушатели событий сохранения и регистрируются команды.
 
 #### Параметры
@@ -99,6 +103,7 @@ appendToDisk({
 ### `deactivate()`
 
 **Файл:** [extension.ts]
+
 **Назначение:** Очищает ресурсы при деактивации.
 
 #### Параметры
